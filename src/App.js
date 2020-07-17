@@ -1,23 +1,23 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Portfolio from "./pages/Portfolio";
-import Contact from "./pages/Contact";
-import Aboutme from "./pages/Aboutme"
+import portfolio from "./pages/portfolio/portfolio.js";
+import contact from "./pages/contact/contact.js";
+import about from "./pages/about/about.js";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
 
 function App() {
-  document.title = "Alex Bailon";
+  document.title = "Rachel Levy";
 
   return (
     <Router>
         <div>
           <Navbar/>
           <Wrapper>
-            <Route exact path="/" component={Aboutme} />
-            <Route exact path="/portfolio" component={Portfolio} />
-            <Route exact path="/contact" component={Contact} />
+            <Route exact path="/" component={about} />
+            <Route exact path="/portfolio" component={portfolio} />
+            <Route exact path="/contact" component={contact} />
           </Wrapper>
           <Footer />
         </div>
